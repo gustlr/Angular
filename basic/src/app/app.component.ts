@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ɵɵsetComponentScope } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basic';
+  imgURL = 'https://picsum.photos/id/237/200/300'
+
+  getName(){
+    return this.getName.length
+  }
+  chamgeImage(e: KeyboardEvent){
+    this.imgURL = (e.target as HTMLInputElement).value
+  }
+
+  logImg(event: string){
+    console.log(event)
+  }
 }
